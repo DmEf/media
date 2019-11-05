@@ -85,6 +85,7 @@ img {
 /*стили меню*/
 .main-nav {
   flex-grow: 1;
+  background-color: #ffffff;
 }
 .main-nav__items {
   display: flex;
@@ -217,10 +218,98 @@ img {
   max-width: 1000px;
 }
 .news__heading {
-  width: 850px;
+  max-width: 850px;
   font-size: 50px;
   line-height: 60px;
   font-weight: 700;
+}
+@media (max-width: 470px) {
+  .news__heading {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+.news__items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  max-width: 1173px;
+  background-color: #e4ebca;
+}
+.news__item-link {
+  text-decoration: none;
+  margin-right: 3px;
+  margin-bottom: 3px;
+}
+.news__item-link-1 {
+  background: url('../img/news1.jpg') no-repeat center;
+}
+.news__item-link-2 {
+  background: url('../img/news2.jpg') no-repeat center;
+}
+.news__item-link-3 {
+  background: url('../img/news3.jpg') no-repeat center;
+}
+.news__item-link-4 {
+  background: url('../img/news1.jpg') no-repeat center;
+}
+.news__item-link-5 {
+  background: url('../img/news2.jpg') no-repeat center;
+}
+.news__item {
+  max-width: 388px;
+  box-sizing: border-box;
+  padding: 90px 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  /*&:last-child {
+			margin-right: auto;
+		}*/
+}
+.news__item:hover {
+  background-color: transparent;
+}
+.news__item--display--none {
+  display: none;
+}
+.news__item-text {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.news__item time {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffe05d;
+}
+.news__all-link {
+  position: relative;
+  display: block;
+  padding-left: 47px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #1d1d1d;
+}
+.news__all-link::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 32px;
+  height: 11px;
+  background: url('../img/arrow_news_all.png') no-repeat center;
+}
+.news__all-link:hover {
+  color: #c72828;
+  text-decoration: underline;
 }
 .modal-overlay {
   display: none;
