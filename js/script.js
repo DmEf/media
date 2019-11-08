@@ -28,3 +28,20 @@ navToggle.addEventListener('click', function() {
 //  		navMain.classList.remove('main-nav--open');
 //  	}
 //  });
+
+let newsLink = document.querySelector('.news__all-link');
+let newsItem = document.querySelectorAll('.news__item-link--display--none');
+
+newsLink.addEventListener('click', function() {
+	event.preventDefault();
+	console.log(newsItem);
+	for (let i = 0; i < newsItem.length; i++) {
+		if (newsItem[i].classList.contains('news__item-link--display--none')) {
+			newsItem[i].classList.remove('news__item-link--display--none');
+			newsItem[i].classList.add('news__item-link--display--block');
+		} else {
+			newsItem[i].classList.remove('news__item-link--display--block');
+			newsItem[i].classList.add('news__item-link--display--none');
+		}
+	}
+});

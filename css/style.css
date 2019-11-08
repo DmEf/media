@@ -243,6 +243,12 @@ img {
   margin-right: 3px;
   margin-bottom: 3px;
 }
+.news__item-link--display--none {
+  display: none;
+}
+.news__item-link--display--block {
+  display: block;
+}
 .news__item-link-1 {
   background: url('../img/news1.jpg') no-repeat center;
 }
@@ -269,9 +275,6 @@ img {
 }
 .news__item:hover {
   background-color: transparent;
-}
-.news__item--display--none {
-  display: none;
 }
 .news__item-text {
   padding: 0;
