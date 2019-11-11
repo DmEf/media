@@ -1,7 +1,8 @@
 let navMain = document.querySelector('.main-nav');
 let navToggle = document.querySelector('.page-header__toggle');
-let modalOverlay = document.querySelector('.modal-overlay');
+// let modalOverlay = document.querySelector('.modal-overlay');
 
+// выпадающее меню.
 // Нужно повесить на один клик все. 
 
 navToggle.addEventListener('click', function() {
@@ -10,15 +11,16 @@ navToggle.addEventListener('click', function() {
 		navToggle.classList.add('page-header__toggle--close');
 
 		navMain.classList.add('main-nav--open');
-		modalOverlay.classList.add('modal-overlay--show');
+		// modalOverlay.classList.add('modal-overlay--show');
 	} else {
 		navToggle.classList.remove('page-header__toggle--close');
 		navToggle.classList.add('page-header__toggle--open');
 
 		navMain.classList.remove('main-nav--open');
-		modalOverlay.classList.remove('modal-overlay--show')
+		// modalOverlay.classList.remove('modal-overlay--show')
 	}
 });
+
 
 // navToggle.addEventListener('click', function() {
 // 	if (navToggle.classList.contains('page-header__toggle--close')) {
@@ -29,6 +31,26 @@ navToggle.addEventListener('click', function() {
 //  	}
 //  });
 
+// форма
+let requestToggle = document.querySelector('.main-nav__request-link');
+let modalContent = document.querySelector('.modal-content');
+let modalOverlay = document.querySelector('.modal-overlay');
+let modalOverlayClose = document.querySelector('.modal-content-close');
+
+
+requestToggle.addEventListener('click', function() {
+	event.preventDefault();
+	modalContent.classList.add('modal-content-show');
+	modalOverlay.classList.add('modal-overlay-show');
+});
+
+modalOverlayClose.addEventListener('click', function() {
+	event.preventDefault();
+	modalContent.classList.remove('modal-content-show');
+	modalOverlay.classList.remove('modal-overlay-show');
+})
+
+// блок новостей
 let newsLink = document.querySelector('.news__all-link');
 let newsItem = document.querySelectorAll('.news__item-link--display--none');
 

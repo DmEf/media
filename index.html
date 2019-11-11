@@ -24,10 +24,12 @@
 						<li class="main-nav__item"><a href="#" class="main-nav__link">О застройщике</a></li>
 						<li class="main-nav__item main-nav__item--active"><a href="#" class="main-nav__link main-nav__link--active">Новости</a></li>
 						<li class="main-nav__item"><a class="main-nav__link">Контакты</a></li>
-						<li class="main-nav__item main-nav__item-request"><a href="#" class="main-nav__link main-nav__link--padding">
-							<p class="text text__number">+375 (29) 608-00-55</p>
-							<p class="text text__request">Заявка</p>
-						</a></li>
+						<li class="main-nav__item main-nav__item-request">
+							<a href="#" class="main-nav__link main-nav__request-link main-nav__link--padding">
+								<p class="text text__number">+375 (29) 608-00-55</p>
+								<p class="text text__request">Заявка</p>
+							</a>
+						</li>
 					</ul>
 				</nav>
 				<div class="page-header__menu-btn">
@@ -101,7 +103,36 @@
 			</div>
 		</div>
 	</main>
-	<!-- <div class="modal-overlay"></div> -->
+	<div class="modal-content">
+		<button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+		<form action="#" class="request-form">
+			<input class="request-form__input request-form__input-text" type="text" name="name" placeholder="ФИО">
+			<input class="request-form__input request-form__input-tel" type="tel" name="phone" placeholder="Номер телефона">
+			<input class="request-form__input request-form__input-email" type="email" name="email" placeholder="E-mail">
+			<div class="request-form__items-radio">
+				<span class="request-form__items-radio-text">Количество комнат</span>
+				<label class="request-form__item-radio">
+					<input class="request-form__input-radio" name="rooms" type="radio" value="1">
+					<span class="request-form__radio-indicator request-form__radio-indicator1"></span>
+				</label>
+				<label class="request-form__item-radio">
+					<input class="request-form__input-radio" name="rooms" type="radio" value="2">
+					<span class="request-form__radio-indicator request-form__radio-indicator2"></span>
+				</label>
+				<label class="request-form__item-radio">
+					<input class="request-form__input-radio" name="rooms" type="radio" value="3">
+					<span class="request-form__radio-indicator request-form__radio-indicator3"></span>
+				</label>
+				
+				
+				
+			</div>
+			<textarea class="request-form__input" name="area" id="" placeholder="Текст"></textarea>
+			<button class="btn" type="submit">Отправить</button>
+		</form>
+	</div>
+
+	<div class="modal-overlay"></div>
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 	<script type="text/javascript" src="js/command.js"></script>

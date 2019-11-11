@@ -1,0 +1,159 @@
+.modal-content {
+	display: none;
+	position: fixed;
+	top: 100px;
+	left: 50%;
+	 z-index: 20;
+
+	width: 500px;
+	padding: 60px;
+	box-sizing: border-box;
+	margin-left: -250px;
+	border: 2px solid #fee05c;
+	background-color: #ffffff;
+	box-shadow: 0px 3px 6px 0 #d0d0d0;
+
+
+	&-show {
+		display: block;
+	}
+
+
+	&-close {
+		position: absolute;
+		top: -56px;
+		right: -56px;
+
+		width: 109px;
+		height: 109px;
+		padding: 0;
+		margin: 0;
+		font-size: 0;
+		line-height: 0;
+		background-color: #fee05c;
+		transform: rotate(45deg);
+		border: 0;
+		cursor: pointer;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			width: 18px;
+			height: 18px;
+			margin-top: -9px;
+			margin-left: -9px;
+			background: url("../img/cross.png");
+			transform: rotate(45deg);
+		}
+	}
+}
+.request-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	font-size: 16px;
+	line-height: 45px;
+	font-weight: 700;
+
+	&__input {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 30px;
+		padding-left: 25px;
+		padding-right: 25px;
+
+		font-size: 16px;
+		line-height: 45px;
+		font-weight: 700;
+		border: 1px solid #d0d0d0;
+		background-color: #f5f5f5;
+	}
+	&__items-radio {
+		display: flex;
+		align-items: center;
+		align-self: flex-start;
+
+		&-text {
+			display: block;
+			margin-right: 30px;
+		}
+	}
+	&__item-radio {
+		font-size: 0;
+		line-height: 0;
+		margin-right: 12px;
+	}
+	&__input-radio {
+		display: none;
+	}
+	&__radio-indicator {
+		position: relative;
+		display: block;
+		width: 23px;
+		height: 23px;
+		box-sizing: border-box;
+
+		font-size: 16px; 
+		line-height: 16px;
+		font-weight: 700;
+		color: #d0d0d0;
+
+		border: 1px solid #d0d0d0;
+		background-color: #f5f5f5;
+		
+		&1::before {
+			content: "1";
+			position: absolute;
+			top: 2px;
+			left: 6px;
+
+		}
+		&2::before {
+			content: "2";
+			position: absolute;
+			top: 2px;
+			left: 6px;
+		}
+		&3::before {
+			content: "3";
+			position: absolute;
+			top: 2px;
+			left: 6px;
+
+		}
+
+
+	}
+	&__input-radio:checked + &__radio-indicator {
+			background-color: #fee05c;
+			border-color: #fee05c;
+			color: #000000;
+		}
+}
+.btn {
+	width: 100%;
+
+	font-size: 16px;
+	line-height: 45px;
+	font-weight: 700;
+	border: none;
+	background-color: #ffde5d;
+	box-shadow: 0px 3px 6px 0 #d0d0d0;
+}
+/*.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(255, 255, 255, 0.5);
+}*/
