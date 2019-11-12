@@ -3,6 +3,8 @@
 	flex-direction: column;
 	align-items: center;
 
+
+
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
@@ -11,6 +13,9 @@
 	};
 	&__heading {
 		max-width: 850px;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 42px;
 		font-size: 50px;
 		line-height: 60px;
 		font-weight: 700;
@@ -20,15 +25,25 @@
 		}
 
 	}
+	&__text {
+		padding: 0;
+		margin: 0;
+		margin-bottom: 30px;
+		font-size: 16px;
+		line-height: 22px;
+		font-weight: 400;
+	}
 	&__items {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: stretch;
 		flex-wrap: wrap;
+		margin-top: 30px;
+		margin-bottom: 60px;
 
 		max-width: 1173px;
-		background-color: #e4ebca;
+		/*background-color: #e4ebca;*/
 	}
 	&__item-link {
 		text-decoration: none;
@@ -90,6 +105,7 @@
 		}
 	}
 	&__all{
+		margin-bottom: 85px;
 		&-link {
 			position: relative;
 			display: block;
