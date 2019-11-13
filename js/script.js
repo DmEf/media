@@ -36,19 +36,31 @@ let requestToggle = document.querySelector('.main-nav__request-link');
 let modalContent = document.querySelector('.modal-content');
 let modalOverlay = document.querySelector('.modal-overlay');
 let modalOverlayClose = document.querySelector('.modal-content-close');
+let name = modalContent.querySelector("[name=name]");
 
 
 requestToggle.addEventListener('click', function() {
 	event.preventDefault();
 	modalContent.classList.add('modal-content-show');
 	modalOverlay.classList.add('modal-overlay-show');
+	name.focus();
 });
 
 modalOverlayClose.addEventListener('click', function() {
 	event.preventDefault();
 	modalContent.classList.remove('modal-content-show');
 	modalOverlay.classList.remove('modal-overlay-show');
-})
+});
+
+window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (modalContent.classList.contains("modal-content-show")) {
+            modalContent.classList.remove("modal-content-show");
+            modalOverlay.classList.remove('modal-overlay-show');
+          }
+        }
+      });
+
 
 // блок новостей
 let newsLink = document.querySelector('.news__all-link');
