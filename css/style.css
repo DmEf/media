@@ -167,11 +167,21 @@ img {
 }
 @media (max-width: 880px) {
   .main-nav__link .text__number {
+    position: relative;
     padding-top: 28px;
     padding-bottom: 28px;
     font-size: 12px;
     line-height: 12px;
     font-weight: 400;
+  }
+  .main-nav__link .text__number::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 35px;
+    width: 15px;
+    height: 26px;
+    background: url("../img/PI.png") no-repeat center;
   }
 }
 .main-nav__link .text__request {
